@@ -1,0 +1,6 @@
+{
+    "username": "//input[@id=\"username\"]",
+    "password": "//input[@id=\"password\"]",
+    "loginButton": "//input[@id='kc-login']",
+    "welcomeMessage": "(//LI[@class='c-header-nav-item px-3'])[1]"
+}
