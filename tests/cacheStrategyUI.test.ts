@@ -12,12 +12,12 @@ test.beforeEach(async ({ page }) => {
     await page.waitForTimeout(1000); 
 });
 
-test('UI: Domain can be found in domain lis', async ({ page }) => {
+test('UI: Domain can be found in domain listing -Positive', async ({ page }) => {
     await expect(page.locator(locators.configurationButton)).toBeVisible({ timeout: 10000 });
     await page.click(locators.configurationButton);
 });
 
-test('UI: Add and then delete cache path', async ({ page }) => {
+test('UI: Add and then delete cache path -Positive', async ({ page }) => {
     await page.click(locators.configurationButton);
 
     // If the cache path already exists, delete it first
@@ -56,14 +56,14 @@ test('UI: Add and then delete cache path', async ({ page }) => {
     await expect(page.locator(locators.addedCacheFile)).toHaveCount(0);
 });
 
-test('UI: Add invalid cache path shows error', async ({ page }) => {
+test('UI: Add invalid cache path throws an error -Negative', async ({ page }) => {
     await page.click(locators.configurationButton);
     await page.fill(locators.addNewCasheInput, 'invalid path');
     await page.click(locators.addNewCasheButton);
     await expect(page.locator(locators.errorMessage)).toBeVisible();
 });
 
-test.only('UI: Add cache path with spaces', async ({ page }) => {
+test('UI: Add cache path with spaces throws an error -Negative', async ({ page }) => {
     await page.click(locators.configurationButton);
     await page.fill(locators.addNewCasheInput, '/path with spaces');
     await page.click(locators.addNewCasheButton);
