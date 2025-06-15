@@ -3,5 +3,6 @@
     "credentials": {
         "username": "qa.assessment@asians.cloud",
         "password": "qaengineer123"
-    }
+    },
+    "domainURL": "test-3.cwcdn.com"
 }

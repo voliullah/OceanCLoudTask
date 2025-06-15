@@ -2,5 +2,13 @@
     "username": "//input[@id=\"username\"]",
     "password": "//input[@id=\"password\"]",
     "loginButton": "//input[@id='kc-login']",
-    "welcomeMessage": "(//LI[@class='c-header-nav-item px-3'])[1]"
+    "welcomeMessage": "(//LI[@class='c-header-nav-item px-3'])[1]",
+    "configurationButton": "//button[@class='btn btn-sm text-success']",
+    "addNewCasheInput": "//textarea[@placeholder='/path, /test']",
+    "addNewCasheButton": "(//button[@class='ant-btn']//span[contains(text(), 'Add')])[2]",
+    "addedCacheFile": "//li[@class='list-group-item']//div[contains(text(), 'file')]",
+    "deleteCacheButtonFile": "//li[contains(@class, 'list-group-item')][.//text()[contains(., '/file')]]//div[contains(@class, 'shadow-list-action-btns')]",
+    "saveButton": "//button[contains(@class, 'ant-btn') and contains(@class, 'ant-btn-primary') and .//i[contains(@class, 'anticon-save')]]",
+    "successMessage": "//div[@class='ant-notification-notice-message']",
+    "errorMessage": "(//div[contains(@class, 'ant-notification-notice-message') and contains(text(), 'An error occurred')])[1]"
 }
