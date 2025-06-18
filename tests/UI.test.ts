@@ -72,3 +72,45 @@ test('UI: Add cache path with spaces throws an error -Negative', async ({ page }
     await expect(page.locator(locators.errorMessage)).toBeVisible();
 });
 
+test('Domain test01.p9m.net returns expected content after cache config update', async ({ playwright }) => {
+  const request = await playwright.request.newContext({ ignoreHTTPSErrors: true });
+  const response = await request.get('https://test01.p9m.net');
+
+  expect(response.status()).toBe(200);
+  const responseBody = await response.text();
+  expect(responseBody).toContain('Pokémon'); // Replace with a relevant keyword for your app
+
+  const headers = response.headers();
+  expect(headers['cache-control']).toBeDefined();
+
+  await request.dispose();
+});
+test('Domain test02.p9m.net returns expected content after cache config update', async ({ playwright }) => {
+  const request = await playwright.request.newContext({ ignoreHTTPSErrors: true });
+  const response = await request.get('https://test02.p9m.net');
+
+  expect(response.status()).toBe(200);
+  const responseBody = await response.text();
+  expect(responseBody).toContain('Pokémon'); // Replace with a relevant keyword for your app
+
+  const headers = response.headers();
+  expect(headers['cache-control']).toBeDefined();
+
+  await request.dispose();
+});
+test('Domain test03.p9m.net returns expected content after cache config update', async ({ playwright }) => {
+  const request = await playwright.request.newContext({ ignoreHTTPSErrors: true });
+  const response = await request.get('https://test03.p9m.net');
+
+  expect(response.status()).toBe(200);
+  const responseBody = await response.text();
+  expect(responseBody).toContain('Pokémon'); // Replace with a relevant keyword for your app
+
+  const headers = response.headers();
+  expect(headers['cache-control']).toBeDefined();
+
+  await request.dispose();
+})
+
+
+

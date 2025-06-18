@@ -10,5 +10,6 @@
     "deleteCacheButtonFile": "//li[contains(@class, 'list-group-item')][.//text()[contains(., '/file')]]//div[contains(@class, 'shadow-list-action-btns')]",
     "saveButton": "//button[contains(@class, 'ant-btn') and contains(@class, 'ant-btn-primary') and .//i[contains(@class, 'anticon-save')]]",
     "successMessage": "//div[@class='ant-notification-notice-message']",
-    "errorMessage": "(//div[contains(@class, 'ant-notification-notice-message') and contains(text(), 'An error occurred')])[1]"
+    "errorMessage": "(//div[contains(@class, 'ant-notification-notice-message') and contains(text(), 'An error occurred')])[1]",
+    "arrowDownIcon": "(//div[@class='create-button-group ant-btn-group ant-dropdown-button']//button[@class='ant-btn ant-btn-default ant-dropdown-trigger'])[1]"
 }

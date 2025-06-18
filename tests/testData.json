@@ -4,5 +4,6 @@
         "username": "qa.assessment@asians.cloud",
         "password": "qaengineer123"
     },
-    "domainURL": "test-3.cwcdn.com"
+    "domainURL": "test-3.cwcdn.com",
+    "serverIPaddress": "139.162.61.119:443"
 }
